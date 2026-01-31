@@ -106,7 +106,7 @@ export default function Home() {
 
 
                 <div className="relative z-10 space-y-8">
-                    <h2 className="text-6xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tight text-white">
+                    <h2 className="text-5xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tight text-white">
                         Master the <br />
                         <span className="text-primary">Zenshin</span> <br />
                         Way
@@ -116,7 +116,7 @@ export default function Home() {
                         The ultimate dedicated reader for Lookism. No distractions, no other series — just the high-octane saga of Daniel Park in zero lag.
                     </p>
 
-                    <div className="flex gap-6">
+                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                         <button
                             onClick={handleDownload}
                             className="bg-primary text-black px-10 h-16 rounded-2xl font-black italic uppercase hover:-translate-y-1 transition cursor-pointer"
