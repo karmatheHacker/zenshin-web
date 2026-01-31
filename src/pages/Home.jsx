@@ -166,8 +166,8 @@ export default function Home() {
                     <div className="grid md:grid-cols-3 gap-12">
                         {/* Feature 1 */}
                         <div className="flex flex-col items-center">
-                            <div className="relative w-[280px] aspect-[9/19.5] rounded-[3rem] p-2 bg-black iphone-bezel mb-8 shadow-2xl">
-                                <div className="w-full h-full rounded-[2.2rem] bg-black overflow-hidden border border-white/10 relative">
+                            <div className="relative w-[200px] md:w-[280px] aspect-[9/19.5] rounded-[2.5rem] md:rounded-[3rem] p-2 bg-black iphone-bezel mb-8 shadow-2xl">
+                                <div className="w-full h-full rounded-[2rem] md:rounded-[2.2rem] bg-black overflow-hidden border border-white/10 relative">
                                     <img src="/feat-notification.jpg" alt="Instant Notifications" className="w-full h-full object-fill" />
                                 </div>
                             </div>
@@ -177,8 +177,8 @@ export default function Home() {
 
                         {/* Feature 2 */}
                         <div className="flex flex-col items-center">
-                            <div className="relative w-[280px] aspect-[9/19.5] rounded-[3rem] p-2 bg-black iphone-bezel mb-8 shadow-2xl">
-                                <div className="w-full h-full rounded-[2.2rem] bg-black overflow-hidden border border-white/10 relative">
+                            <div className="relative w-[200px] md:w-[280px] aspect-[9/19.5] rounded-[2.5rem] md:rounded-[3rem] p-2 bg-black iphone-bezel mb-8 shadow-2xl">
+                                <div className="w-full h-full rounded-[2rem] md:rounded-[2.2rem] bg-black overflow-hidden border border-white/10 relative">
                                     <img src="/feat-options.jpg" alt="Reading Options" className="w-full h-full object-fill" />
                                 </div>
                             </div>
@@ -188,8 +188,8 @@ export default function Home() {
 
                         {/* Feature 3 */}
                         <div className="flex flex-col items-center">
-                            <div className="relative w-[280px] aspect-[9/19.5] rounded-[3rem] p-2 bg-black iphone-bezel mb-8 shadow-2xl">
-                                <div className="w-full h-full rounded-[2.2rem] bg-black overflow-hidden border border-white/10 relative">
+                            <div className="relative w-[200px] md:w-[280px] aspect-[9/19.5] rounded-[2.5rem] md:rounded-[3rem] p-2 bg-black iphone-bezel mb-8 shadow-2xl">
+                                <div className="w-full h-full rounded-[2rem] md:rounded-[2.2rem] bg-black overflow-hidden border border-white/10 relative">
                                     <img src="/feat-reader.jpg" alt="Immersive Reader" className="w-full h-full object-fill" />
                                 </div>
                             </div>
