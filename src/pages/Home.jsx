@@ -116,6 +116,11 @@ export default function Home() {
                         The ultimate dedicated reader for Lookism. No distractions, no other series — just the high-octane saga of Daniel Park in zero lag.
                     </p>
 
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary/80 bg-primary/10 px-4 py-2 rounded-lg w-fit mx-auto lg:mx-0">
+                        <span className="material-symbols-outlined text-sm">schedule</span>
+                        Official chapter at 9 PM on Thursday
+                    </div>
+
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
                         <button
                             onClick={handleDownload}
