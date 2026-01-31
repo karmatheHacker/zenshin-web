@@ -102,21 +102,21 @@ export default function Home() {
             </header>
 
             {/* HERO */}
-            <section className="relative max-w-[1280px] mx-auto px-6 lg:px-10 pt-10 pb-24 grid lg:grid-cols-2 gap-16 items-start">
+            <section className="relative max-w-[1280px] mx-auto px-6 lg:px-10 pt-10 pb-24 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
 
-                <div className="relative z-10 space-y-8">
+                <div className="relative z-10 space-y-6 md:space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left">
                     <h2 className="text-4xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tight text-white">
                         Master the <br />
                         <span className="text-primary">Zenshin</span> <br />
                         Way
                     </h2>
 
-                    <p className="text-gray-400 max-w-xl border-l-4 border-primary/30 pl-6">
+                    <p className="text-gray-400 max-w-xl border-l-4 border-primary/30 pl-6 text-sm md:text-base">
                         The ultimate dedicated reader for Lookism. No distractions, no other series — just the high-octane saga of Daniel Park in zero lag.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
                         <button
                             onClick={handleDownload}
                             className="bg-primary text-black px-6 h-12 md:px-10 md:h-16 rounded-2xl font-black italic uppercase text-sm md:text-base hover:-translate-y-1 transition cursor-pointer"
@@ -134,10 +134,10 @@ export default function Home() {
                 </div>
 
                 {/* PHONE MOCK */}
-                <div className="relative flex justify-center">
+                <div className="relative flex justify-center mt-8 lg:mt-0">
                     {/* Glow removed */}
-                    <div className="relative w-[300px] aspect-[9/19.5] rounded-[3.5rem] p-2 bg-black iphone-bezel">
-                        <div className="w-full h-full rounded-[2.5rem] bg-black overflow-hidden border border-white/10 relative">
+                    <div className="relative w-[240px] md:w-[300px] aspect-[9/19.5] rounded-[2.5rem] md:rounded-[3.5rem] p-2 bg-black iphone-bezel">
+                        <div className="w-full h-full rounded-[2rem] md:rounded-[2.5rem] bg-black overflow-hidden border border-white/10 relative">
                             <img
                                 src="/raw-hero.jpg"
                                 alt="App Screenshot"
