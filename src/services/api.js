@@ -61,7 +61,7 @@ export const getLatestRelease = async () => {
 
 // --- CACHE STORE ---
 const CACHE = {
-    stats: { data: null, timestamp: 0, ttl: 30 * 1000 }, // 30 seconds cache
+    stats: { data: null, timestamp: 0, ttl: 1000 }, // 1 second cache (basically realtime)
     history: { data: null, timestamp: 0, ttl: 5 * 60 * 1000 } // 5 minutes cache
 };
 
