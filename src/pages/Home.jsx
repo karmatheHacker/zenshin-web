@@ -106,7 +106,7 @@ export default function Home() {
 
 
                 <div className="relative z-10 space-y-8">
-                    <h2 className="text-5xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tight text-white">
+                    <h2 className="text-4xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tight text-white">
                         Master the <br />
                         <span className="text-primary">Zenshin</span> <br />
                         Way
@@ -119,14 +119,14 @@ export default function Home() {
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                         <button
                             onClick={handleDownload}
-                            className="bg-primary text-black px-10 h-16 rounded-2xl font-black italic uppercase hover:-translate-y-1 transition cursor-pointer"
+                            className="bg-primary text-black px-6 h-12 md:px-10 md:h-16 rounded-2xl font-black italic uppercase text-sm md:text-base hover:-translate-y-1 transition cursor-pointer"
                         >
                             Get the App →
                         </button>
 
                         <button
                             onClick={() => document.getElementById('features').scrollIntoView({ behavior: 'smooth' })}
-                            className="glass-card px-10 h-16 rounded-2xl font-black italic uppercase text-white hover:bg-white/5 transition cursor-pointer"
+                            className="glass-card px-6 h-12 md:px-10 md:h-16 rounded-2xl font-black italic uppercase text-white text-sm md:text-base hover:bg-white/5 transition cursor-pointer"
                         >
                             Features
                         </button>
