@@ -1,54 +1,41 @@
-# Deployment Guide
+# Deployment Architecture
 
-You can deploy your **Zenshin Web** app for **FREE** using **Vercel** or **Netlify**. Both platforms are excellent, free for hobby projects, and support React/Vite out of the box.
+## You are using a "Serverless" Architecture
+Good news! You **DO NOT** need to deploy a separate backend to Render.
+Your application is built with **React** (Frontend) and **Supabase** (Backend-as-a-Service).
 
-## Option 1: Vercel (Recommended)
-*Fastest and easiest for React apps.*
+| Component | Technology | Hosting | Status |
+| :--- | :--- | :--- | :--- |
+| **Frontend** | React + Vite | **Vercel** | Ready to Deploy |
+| **Backend** | Supabase | **Supabase Cloud** | **Already Live** |
+| **Database** | PostgreSQL | **Supabase Cloud** | **Already Live** |
 
-### Method A: Connect with GitHub (Best)
-1.  Push your code to a GitHub repository.
-2.  Go to [vercel.com](https://vercel.com) and sign up/login.
-3.  Click **"Add New"** > **"Project"**.
-4.  Import your `zenshin-web` repository.
-5.  **Environment Variables**:
-    *   Expand the "Environment Variables" section.
-    *   Add the keys from your `.env` file:
-        *   `VITE_SUPABASE_URL` : `your_supabase_url`
-        *   `VITE_SUPABASE_ANON_KEY` : `your_actual_key_here`
-6.  Click **"Deploy"**.
-
-### Method B: Deploy from Command Line
-1.  Install Vercel CLI: `npm i -g vercel`
-2.  Run `vercel` in your project folder.
-3.  Follow the prompts (Login -> Set up project -> Yes -> Yes).
-4.  When asked for Environment Variables, you can configure them in the dashboard link it gives you.
+## Why no Render?
+Render is typically used for hosting Node.js/Python servers (e.g., Express.js). Since your app talks directly to Supabase from the browser (using the `supabase-js` client), you skip the "middleman" server entirely. This makes your app faster and cheaper to host.
 
 ---
 
-## Option 2: Netlify
-*Great alternative with drag-and-drop support.*
+## Final Step: Deploy Frontend to Vercel
+Since you are already logged in to Supabase, you only need to push your React code to Vercel.
 
-### Method A: Drag & Drop (No Git needed)
-1.  Run `npm run build` on your computer (this creates a `dist` folder).
-2.  Go to [app.netlify.com/drop](https://app.netlify.com/drop).
-3.  Drag and drop the **`dist`** folder into the browser window.
-4.  **Important**: The site will break slightly because it's missing Env Variables.
-5.  Go to **Site Settings** > **Environment variables**.
-6.  Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`.
-7.  Go to **Deploys** and "Trigger Deploy" (or just re-upload).
+### Instructions (Run in Terminal)
+1.  Run the command:
+    ```bash
+    vercel
+    ```
+2.  **Login**: It will open your browser. Log in with GitHub or Email.
+3.  **Setup**:
+    -   Set up and deploy? **Yes** (`y`)
+    -   Scope? (Select your name)
+    -   Link to existing project? **No** (`n`)
+    -   Project Name: `zenshin-web`
+    -   Directory: `./`
+4.  **Environment Variables**:
+    -   It will ask to override settings.
+    -   **Important:** You need to go to the Vercel Dashboard (website) after the project is created to add your credentials:
+        *   `VITE_SUPABASE_URL`
+        *   `VITE_SUPABASE_ANON_KEY`
+    -   *Or*, if your CLI detects the local `.env`, accept importing it!
 
-### Method B: GitHub
-1.  Push to GitHub.
-2.  Log in to Netlify -> "Add new site" -> "Import an existing project".
-3.  Connect GitHub -> Select Repo.
-4.  Add Environment Variables in "Advanced build settings" or in dashboard after.
-5.  Deploy.
-
----
-
-## ⚠️ Critical Step: Environment Variables
-For both platforms, you **MUST** add your Supabase keys in their dashboard settings. The `.env` file on your computer is NOT uploaded for security reasons.
-
-**Keys to add:**
-1.  `VITE_SUPABASE_URL`
-2.  `VITE_SUPABASE_ANON_KEY`
+### That's it!
+Once Vercel finishes, you will get a link like `https://zenshin-web.vercel.app`.
